@@ -14,8 +14,5 @@ namespace OnlineShoppingStore.Models
         public string Description { get; set; }
         public string Category { get; set; }
     }
-    //public class EFDbContext : DbContext
-    //{
-    //    public DbSet<Product> Product { get; set; }
-    //}
+    
 }
