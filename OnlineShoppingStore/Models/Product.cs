@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
 namespace OnlineShoppingStore.Models
 {
@@ -14,5 +14,9 @@ namespace OnlineShoppingStore.Models
         public string Description { get; set; }
         public string Category { get; set; }
     }
-    
+    public class ProductDbContext : DbContext
+    { 
+        public DbSet<Product> Products { get; set; }
+    }
+
 }

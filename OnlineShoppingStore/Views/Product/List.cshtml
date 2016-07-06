@@ -1,12 +1,30 @@
-﻿@model OnlineShoppingStore.Models.Product
+﻿@model IEnumerable<OnlineShoppingStore.Models.Product>
+
 
 @{
     ViewBag.Title = "List";
 }
 
 <div>
-    <h4>@Model.Name</h4>
+    @*<h4>@Model.Name</h4>
     <h3>@Model.Price</h3>
-    <p>@Model.Description</p>
+    <p>@Model.Description</p>*@
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => product.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => product.Price)
+            </td>
+            
+            @*<td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID })  |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>*@
+        </tr>
+    }
 </div>
 
